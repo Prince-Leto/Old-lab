@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+		<head>
+			<meta charset="UTF-8"/>
+			<title>Déformations bijectives d'image</title>
+			<meta name="description" content="Déformations bijectives d'image"/>
+			<link rel="stylesheet" href="Styles/Style.css" media="screen"/>
+			<link rel="stylesheet" href="Styles/Min.css" media="screen and (max-width: 950px)"/>
+							<link rel="stylesheet" href="Styles/Page.css"/>
+							<link rel="icon" type="image/png" href="Images/Favicon.png"/>
+			<script type="text/javascript">
+ 			// Google Analytics :
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-36757770-3', 'auto');
+			ga('send', 'pageview');
+			</script>
+			<script src="Scripts/Load.js"></script>
+							<script src="Ressources/Deformation/Code.js"></script>
+						</head>
+		<body>
+					<div id="Menu">
+				<div id="Navigate">
+			<span id="Parametres">Paramètres</span>
+			<div>
+				<input id="Visible" type="checkbox" checked="checked"/><label for="Visible">Menu toujours visible</label><br />
+				<select>
+	<option value="0">Transformation du Boulanger</option>
+	<option value="1">Transformation du Photomaton</option>
+	<option value="2">Transformation Diagonale</option>
+</select><br />
+<label for="Vitesse">Vitesse</label><input id="Vitesse" type="range" min="10" max="1000" value="500"/><br />
+<input type="file"/><br />
+<img id="Start" src="Ressources/Deformation/Start.png" style="cursor: pointer;" alt="Début" height="22" width="22"/>
+<img id="Precedent" src="Ressources/Deformation/PlayerStart.png" style="cursor: pointer;" alt="Precedent" height="22" width="22"/>
+<img id="Lecture" src="Ressources/Deformation/PlayerPause.png" style="cursor: pointer" alt="Lecture/Pause" height="22" width="22"/>
+<img id="Suivant" src="Ressources/Deformation/PlayerFwd.png" style="cursor: pointer" alt="Suivant" height="22" width="22"/>			</div>
+			<span id="Documentation">Documentation</span>
+			<div>
+				Je vous ai offert la possibilité de charger vos propres images - png/jpeg/gif. Envoyez ce que vous voulez, rien n'est conservé sur le serveur - j'ai autre chose à faire que de le saturer.
+			</div>
+		</div>
+					<header>
+				<h1><a href="index.html" title="Accueil">Déformations bijectives d'image</a></h1>
+			</header>
+					<nav>
+				<span id="Articles">Articles
+				<ul>
+				<li><a href="Page-18.html">Rubik's Cube 3D</a></li><li><a href="Page-17.html">Waveform 3D</a></li><li><a href="Page-15.html">Snake</a></li><li><a href="Page-14.html">Labyrinthes Circulaires</a></li><li><a href="Page-13.html">Générateur de Labyrinthe</a></li><li><a href="Page-12.html">Puissance 4</a></li><li><a href="Page-11.html">Le Jeu de la Vie - 3D</a></li><li><a href="Page-9.html">La Fractale de Newton</a></li><li><a href="Page-8.html">La Fourmi de Langton</a></li><li><a href="Page-7.html">Figures autosimilaires</a></li><li><a href="Page-6.html">Déformations bijectives d'image</a></li><li><a href="Page-5.html">Feu de Forêt</a></li><li><a href="Page-10.html">Tetris</a></li><li><a href="Page-4.html">Démineur</a></li><li><a href="Page-2.html">Fractales et ensembles de Julia</a></li><li><a href="Page-3.html">Le Jeu de la Vie - Extensible</a></li><li><a href="Page-1.html">Le Jeu de la Vie</a></li>				</ul>
+				</span>
+				<a id="Contact" href="ContactMe.html">Contact</a>
+				<a id="Propos" href="Apropos.html">À propos</a>
+			</nav>
+					</div>
+				<canvas></canvas>
+				</body>
+		</html>
+		

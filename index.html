@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+		<head>
+			<meta charset="UTF-8"/>
+			<title>Le Laboratoire de Leto</title>
+			<meta name="description" content="Démonstrations d'utilisation de la balise canvas en Javascript avec des automates-cellulaires et des fractales."/>
+			<link rel="stylesheet" href="Styles/Style.css" media="screen"/>
+			<link rel="stylesheet" href="Styles/Min.css" media="screen and (max-width: 950px)"/>
+						<link rel="icon" type="image/png" href="Images/Favicon.png"/>
+			<script type="text/javascript">
+ 			// Google Analytics :
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-36757770-3', 'auto');
+			ga('send', 'pageview');
+			</script>
+			<script src="Scripts/Charger.js"></script>
+					</head>
+		<body>
+					<header>
+				<h1><a href="index.html" title="Accueil">Le Laboratoire de Leto</a></h1>
+			</header>
+					<div id="Menu">
+					<nav>
+				<span id="Articles">Articles
+				<ul>
+				<li><a href="Page-18.html">Rubik's Cube 3D</a></li><li><a href="Page-17.html">Waveform 3D</a></li><li><a href="Page-15.html">Snake</a></li><li><a href="Page-14.html">Labyrinthes Circulaires</a></li><li><a href="Page-13.html">Générateur de Labyrinthe</a></li><li><a href="Page-12.html">Puissance 4</a></li><li><a href="Page-11.html">Le Jeu de la Vie - 3D</a></li><li><a href="Page-9.html">La Fractale de Newton</a></li><li><a href="Page-8.html">La Fourmi de Langton</a></li><li><a href="Page-7.html">Figures autosimilaires</a></li><li><a href="Page-6.html">Déformations bijectives d'image</a></li><li><a href="Page-5.html">Feu de Forêt</a></li><li><a href="Page-10.html">Tetris</a></li><li><a href="Page-4.html">Démineur</a></li><li><a href="Page-2.html">Fractales et ensembles de Julia</a></li><li><a href="Page-3.html">Le Jeu de la Vie - Extensible</a></li><li><a href="Page-1.html">Le Jeu de la Vie</a></li>				</ul>
+				</span>
+				<a id="Contact" href="ContactMe.html">Contact</a>
+				<a id="Propos" href="Apropos.html">À propos</a>
+			</nav>
+					</div>
+					<article>
+				<h2><a href="Page-18.html">Rubik's Cube 3D</a></h2>
+				<time datetime="2017-06-26">26 Juin 2017</time>
+				<a href="Page-18.html"><img src="Ressources/Rubik/Image.png" width="200" alt="Rubik's Cube 3D"></img></a>
+				<p>J'avais commencé à faire un Rubik's Cube à l'époque. Il n'est pas fini, j'ai la flemme de l'intégrer correctement au site, mais le <a href='Nouveau/Rubik.html'>voilà</a>.<br />Il n'y a qu'une option, les autres sont toutes dans le code en variable. Si vous avez la foi, vous pouvez aller l'inspecter pour changer l'angle de vision, changer la taille des cubes, ...<br />Mais surtout, il y a un truc très rigolo avec mon code, c'est qu'au fur et à mesure des itérations, les erreurs de calcul et d'arrondi se propagent. Ce n'est pas visible au début, mais au bout d'un certain temps (moins de 5 minutes) le cube commence à partir en live. On voit apparaitre des erreurs d'alignement, et là très vite ça part en n'importe quoi. Je n'avais pas anticipé ce phénomène à l'époque, et si je devais le refaire aujourd'hui je ferai en sorte de ne plus avoir ce problème là.<br /><br />Ici on commence d'un Rubik's Cube bien fait que l'on va mélanger. À terme je souhaitais tenter des algorithmes de résolutions, mais je ne sais déjà pas les résoudres à la main... alors bon. J'ai abandonné mon code à cause de cette grosse erreur qui nécessite de refaire le code différemment, mais le résultat est déjà sympa ;)</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="18">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-17.html">Waveform 3D</a></h2>
+				<time datetime="2013-05-18">18 Mai 2013</time>
+				<a href="Page-17.html"><img src="Ressources/Waveform/Image.png" width="200" alt="Waveform 3D"></img></a>
+				<p>Enfin un nouvel article ! Voici la représentation 3D de l'amplitude d'une musique.<br />
+Merci à <a href="http://soundcloud.com/iamcook/">I am cook</a> et à <a href="https://soundcloud.com/luke-paris">Luke Paris</a> pour les musiques, n'hésitez pas à visiter leur profil SoundCloud.<br />
+<br />
+<span style="color: orange;">Attention, cette démo ne marche pas sous Firefox, à cause du format MP3, qui est propriétaire, et donc non accepté par Firefox.</span></p>
+										<div class="Plus">
+							<p><strong>En savoir plus :</strong></p>
+							<p>Je vous aurai bien permis d'importer vous même vos propres musiques, mais la méthode que j'utilise ne me permet pas de générer les données nécéssaires sur un hébergement mutualisé. Il me faudrait un serveur dédié. De plus, le temps d'upload pour un MP3 de taille moyenne est un peu long.<br />
+<br />Allez voir la page « <a href="Make-17.html">Making Of</a> » si vous voulez plus de détails sur la méthode de génération. D'ailleurs, si quelqu'un à une autre méthode à me proposer, qu'il n'hésite pas à m'en parler.</p>
+						</div>
+										<div class="Commentaires">
+									<span>1 commentaire</span>
+										<div>
+													<p>Merci à toi de nous faire de la pub ^^ Sinon ça rend vraiment bien, bravo ! - Luke<time datetime="2013-05-19">19 Mai 2013</time></p>
+													<p><span contenteditable="true" data-ref="17">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span>En savoir plus</span>
+												<a href="Make-17.html">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-15.html">Snake</a></h2>
+				<time datetime="2013-01-05">05 Janvier 2013</time>
+				<a href="Page-15.html"><img src="Ressources/Snake/Image.png" width="200" alt="Snake"></img></a>
+				<p>Salut tout le monde !<br />
+Un petit jeu de snake pour bien commencer la nouvelle année.</p>
+								<div class="Commentaires">
+									<span>4 commentaires</span>
+										<div>
+													<p>Et si tu nous refilais les scripts, au lieu de faire ton malin, ça serait pas plus sympa ?<time datetime="2013-04-09">09 Janvier 2013</time></p>
+														<p>Je sais, je sais. J'essaye de faire des pages où j'explique ce que je fait. Mais ça prend du temps, et je ne suis pas sûr d'être très bon pédagogue.<br />Quoi qu'il en soit j'ai commencé à expliquer le principe du Jeu de la Vie en 3D à cette <a href="https://lab.samy.space/Make.php">adresse</a>. Ce n'est qu'un premier jet. Ne m'en voulez pas trop si c'est pas terrible.<time datetime="2013-04-09">09 Janvier 2013</time></p>
+														<p>Mais elle est parfaite ton explication.<time datetime="2013-04-11">11 Janvier 2013</time></p>
+														<p>Yes, merci, c'est motivant pour continuer. Par contre je manque actuellement de temps. J'espère m'y mettre d'ici Juin-Juillet.<time datetime="2013-04-11">11 Janvier 2013</time></p>
+													<p><span contenteditable="true" data-ref="15">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-14.html">Labyrinthes Circulaires</a></h2>
+				<time datetime="2012-12-14">14 Décembre 2012</time>
+				<a href="Page-14.html"><img src="Ressources/LabyrintheCirculaire/Image.png" width="200" alt="Labyrinthes Circulaires"></img></a>
+				<p>Voici maintenant des labyrinthes circulaires. J'ai eu beaucoup de mal à modéliser le problème, mais j'ai fini par trouver quelque chose de satisfaisant. Venez essayer d'en résoudre !</p>
+								<div class="Commentaires">
+									<span>2 commentaires</span>
+										<div>
+													<p>On ne peut pas bouger à celui là par contre ?<time datetime="2012-12-17">17 Décembre 2012</time></p>
+														<p>Non, désolé. Et pour une raison simple, qui rend la chose difficile.<br />
+Je te donne un <a href="http://img11.hostingpics.net/pics/171991Exemple.jpg">exemple</a>. Sur l'image, quand les deux choix en rouge se présentent à l'utilisateur je ne vois pas comment deviner sur quelle case il souhaite aller, en n'exploitant que les touches fléchées. Il faudrait faire quelque chose de plus complexe - à faire et à utiliser.<time datetime="2012-12-18">18 Décembre 2012</time></p>
+													<p><span contenteditable="true" data-ref="14">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-13.html">Générateur de Labyrinthe</a></h2>
+				<time datetime="2012-11-17">17 Novembre 2012</time>
+				<a href="Page-13.html"><img src="Ressources/Labyrinthe/Image.png" width="200" alt="Générateur de Labyrinthe"></img></a>
+				<p>Et hop, voici que quoi passer de longues heures à résoudre des labyrinthes toujours plus complexes. Ou pas... Personnellement, moi ça m'ennuie vite. Par contre les générer, ça, j'ai adoré.<br />Amusez-vous bien.</p>
+								<div class="Commentaires">
+									<span>1 commentaire</span>
+										<div>
+													<p>Sympa, il m'a fallu plusieurs essais avant de trouver la sortie !<time datetime="2012-12-17">17 Novembre 2012</time></p>
+													<p><span contenteditable="true" data-ref="13">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-12.html">Puissance 4</a></h2>
+				<time datetime="2012-10-04">04 Octobre 2012</time>
+				<a href="Page-12.html"><img src="Ressources/Puissance4/Image.png" width="200" alt="Puissance 4"></img></a>
+				<p>Voici venue l'ère des robots - ces derniers deviennent plus malins que l'homme et prennent petit à petit l’ascendant. Prouvez à l'humanité que vous êtes encore plus fort qu'eux en battant cette intelligence artificielle au puissance 4.<br />C'est l'heure du duel !</p>
+								<div class="Commentaires">
+									<span>1 commentaire</span>
+										<div>
+													<p>Balèze quand même le robot. Je l'ai mis à 7 coups prévu et j'ai pas réussi à gagner, mais la bonne chose c'est qu'il n'a pas gagné non plus ! - Nico<time datetime="2012-11-10">10 Octobre 2012</time></p>
+													<p><span contenteditable="true" data-ref="12">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-11.html">Le Jeu de la Vie - 3D</a></h2>
+				<time datetime="2012-09-17">17 Septembre 2012</time>
+				<a href="Page-11.html"><img src="Ressources/Jeudelavie3D/Image.png" width="200" alt="Le Jeu de la Vie - 3D"></img></a>
+				<p>Enfin le jeu de la vie dans sa version en trois dimensions ! Les règles sont les mêmes que la version en deux dimensions, sauf qu'ici, le nombre de cellules voisines est porté à vingt-six.<br />C'est ma création la plus complexe pour l'instant, il a fallu que je fasse de la 3D avec des fonctions de dessins 2D - la 3D n'est pas encore terrible en HTML5.
+</p>
+								<div class="Commentaires">
+									<span>1 commentaire</span>
+										<div>
+													<p>Cool !<time datetime="2012-11-14">14 Septembre 2012</time></p>
+													<p><span contenteditable="true" data-ref="11">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-9.html">La Fractale de Newton</a></h2>
+				<time datetime="2012-06-09">09 Juin 2012</time>
+				<a href="Page-9.html"><img src="Ressources/Newton/Image.png" width="200" alt="La Fractale de Newton"></img></a>
+				<p>Voici un nouveau générateur de Fractale, celui de Newton. Un jour peut être, je déciderai de détailler mes articles et d'en expliquer le principe. Mais pour l'instant, ce qui me botte le plus c'est de dessiner en Javascript. Donc pour comprendre ce qu'est la Fractale de Newton, je vous invite à consulter ce qu'en dit <a href="http://fr.wikipedia.org/wiki/Fractale_de_Newton">Wikipédia</a>.<br />J'ai essayé de faire les choses bien - comme toujours - et je vous ai mis tout plein de paramètres. En fait, j'ai même repris la plus grosse partie de mon code sur la Fractale de Mandelbrot : la génération est aussi multi-coeur.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="9">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-8.html">La Fourmi de Langton</a></h2>
+				<time datetime="2012-06-06">06 Juin 2012</time>
+				<a href="Page-8.html"><img src="Ressources/Fourmi/Image.png" width="200" alt="La Fourmi de Langton"></img></a>
+				<p>Chouette, un autre automate cellulaire ! Pour simplifier, on considère une seule fourmi et deux couleurs. Le sol est découpé en cases initialement remplies de la première couleur. La fourmi est placée sur le sol et elle tourne à gauche ou à droite en fonction de la couleur du sol tout en changeant la couleur de la case une fois qu'elle est passée. On obtient un automate cellulaire plutôt sympa. Après on peut passer au niveau supérieur en ajoutant des couleurs.
+Et la propriété encore jamais démontrée, c'est que la fourmi finit toujours par se construire une autoroute pour diverger vers l'infini - même si mon implémentation actuelle fait évoluer la fourmi sur un Tore.<br />
+Mon explication n'étant pas très claire, je vous mets un lien expliquant le principe : <a href="http://sciencetonnante.wordpress.com/2011/03/21/la-fourmi-de-langton">La fourmi de Langton | Science étonnante</a>.</p>
+								<div class="Commentaires">
+									<span>6 commentaires</span>
+										<div>
+													<p>Pour obtenir une figure symétrique (une sorte de carré dans un carré), il y a la combinaison [[0, "black"], [1, "white"], [1, "blue"], [1, "green"]] avec 4 fourmis placées en forme de carré.<time datetime="2012-07-02">02 Juin 2012</time></p>
+														<p>Effectivement. Bien trouvé. Tu remarqueras que deux fourmis côte à côte suffisent pour faire un carré simple.<br />Sinon pour des formes complexes très sympa, je propose d'aller voir la vidéo dans le lien que j'ai fourni en description.<br />Merci pour le commentaire - que me suis d'ailleurs permis d'éditer pour plus de clarté.<time datetime="2012-07-02">02 Juin 2012</time></p>
+														<p>Deux fourmis côte à côte mais en colonne ! J'ai commencé par les mettre en ligne et elles m'ont donné une petite figure sur laquelle elles restent et qu'elles font passer du noir au blanc.<time datetime="2012-07-04">04 Juin 2012</time></p>
+														<p>Ah bon ? Chez moi en ligne ça marche aussi.<br />Mais je me rends compte d'une erreur dans mon code : impossible de supprimer une fourmi déjà placée, si tu clique sur une cellule où une fourmi était présente tu en superpose une deuxième. Peut être est-ce la source de notre désaccord ? En tout cas il faut que je corrige ce problème.<time datetime="2012-07-07">07 Juin 2012</time></p>
+														<p>Je confirme que deux fourmis côte à côte donne une structure répétitive bornée.<br /><a href="http://i45.servimg.com/u/f45/13/45/85/82/fourmi10.png">La disposition initiale</a><br /><a href="http://i45.servimg.com/u/f45/13/45/85/82/fourmi11.png">La structure</a> (où tout est repassé en noir, hasard du moment où j'ai pris le screen).<time datetime="2012-07-08">08 Juin 2012</time></p>
+														<p>D'accord. Et je vois ce qui est la cause de notre malentendu : moi j'utilisais les couleurs que tu fournissais dans ton premier commentaire, tandis que toi, tu utilises celles qui sont entrées par défaut. D'ailleurs, j'ignorais qu'avec ces couleurs et des fourmis en colonne on obtenait un carré.<br />Mais pourquoi il y a une différence entre des fourmis en ligne et d'autres en colonne ?<br />C'est parce que dans mon implémentation je les place arbitrairement orientées vers le haut, et je ne laisse jamais la possibilité de modifier cette propriété.<time datetime="2012-07-08">08 Juin 2012</time></p>
+													<p><span contenteditable="true" data-ref="8">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-7.html">Figures autosimilaires</a></h2>
+				<time datetime="2012-06-01">01 Juin 2012</time>
+				<a href="Page-7.html"><img src="Ressources/Autosimilaire/Image.png" width="200" alt="Figures autosimilaires"></img></a>
+				<p>Les figures autosimilaires sont d'autres ensembles fractales : d'une part parce que leur dimension topologique n'est pas un nombre entier et d'autre part parce que chaque morceau d'elle-même est encore la figure originale. Pour ne pas faire trois articles un peu vides, j'ai fait du trois en un : <br /><span class="List">D'abord, vous avez Le Flocon de Von Koch, il est créé en partant d'un triangle et en remplaçant le tiers du milieu de chaque segment par deux autres de la même taille en forme de pointe.</span><br /><span class="List">Vous avez également Le Triangle de Sierpinski où l'on enlève à chaque triangle le plus gros triangle équilatéral inscrit.</span><br /><span class="List">Et, sans doute la plus intéressante : La fractale du Dragon. Si vous plier dans le même sens une bande de papier un certain nombre de fois puis que vous la dépliez en mettant tous les angles à quatre-vingt-dix degrés vous aurez une figure assez sympa. La douzième itération correspond à celle que l'on appelle La Fractale du Dragon.</span><br />
+Encore une fois pour comprendre mon charabia, je vous donne un lien apportant la lumière sur mes dires : direction <a href="http://sciences.siteduzero.com/tutoriel-3-546652-les-fractales.html">le site du zéro</a>.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="7">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-6.html">Déformations bijectives d'image</a></h2>
+				<time datetime="2012-05-25">25 Mai 2012</time>
+				<a href="Page-6.html"><img src="Ressources/Deformation/Image.png" width="200" alt="Déformations bijectives d'image"></img></a>
+				<p>Quel titre barbare. Tout ça pour dire que l'on va s'amuser à déplacer des pixels sur une image sans en perdre. En répétant un grand nombre de fois la même transformation la théorie nous dis que l'on va retomber sur l'image de départ. Jugez par vous-même en cliquant sur mon petit lien.<br />Je vous ai mis trois transformations différentes :<br /><span class="List">Celle du boulanger où l'on étire l'image puis on la replie par-dessous.</span><br /><span class="List">Celle du photomaton : l'image est dupliquée en miniatures.</span><br /><span class="List">Et une autre que j'ai appelée transformation en diagonale.</span><br />J'ai également un petit quelque chose à dire sur l'image utilisée par défaut : il s'agit de <a href="http://fr.wikipedia.org/wiki/Lenna">Lena Sjööblom</a>, considérée comme la première femme d'internet. L'histoire se passe en 1973 où des mecs pour tester leur algorithme de traitement d'image prirent le premier magazine qu'ils avaient sous la main : le dernier numéro de Playboy. Ils en découpèrent un bout et depuis lors, cette image est mondialement connue et utilisée par tous.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="6">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-5.html">Feu de Forêt</a></h2>
+				<time datetime="2012-05-20">20 Mai 2012</time>
+				<a href="Page-5.html"><img src="Ressources/Feu/Image.png" width="200" alt="Feu de Forêt"></img></a>
+				<p>Voici un autre automate cellulaire. Le principe de celui-ci, c'est de disposer des arbres au hasard, et de mettre le feu à la rangée du bas. Il suffit ensuite de le regarder se propager aux arbres voisins.<br />On observe un pourcentage de densité des arbres où en dessous duquel la probabilité que le feu traverse la forêt est faible. Cette valeur est appelée seuil de percolation et il est de 55 %. Je vous invite à essayer mon algorithme pour en juger par vous-même.</p>
+								<div class="Commentaires">
+									<span>3 commentaires</span>
+										<div>
+													<p>Ahhhh j'ai cramé la forêt des Landes !<br />SUPER COCO !<time datetime="2013-03-18">18 Mai 2013</time></p>
+														<p>J'ai l'impression qu'il y a une erreur sur le pourcentage réel, il est identique au pourcentage d'arbres.<time datetime="2013-04-09">09 Mai 2013</time></p>
+														<p>Mouai... C'est normal. J'explique mal, c'est de ma faute. Je devrais enlever ce truc.<br />En fait, le pourcentage d'arbre, c'est plutôt une probabilité d'avoir des arbres, c'est comme ça que je les génères. Mais j'affiche le pourcentage réel en comptant combien j'ai réellement d'arbres. En réalité c'était surtout pour pouvoir ajouter la balise <code>&lt;meter&gt;</code>.<time datetime="2013-04-09">09 Mai 2013</time></p>
+													<p><span contenteditable="true" data-ref="5">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-10.html">Tetris</a></h2>
+				<time datetime="2012-04-13">13 Avril 2012</time>
+				<a href="Page-10.html"><img src="Ressources/Tetris/Image.png" width="200" alt="Tetris"></img></a>
+				<p>Peut-être que le Tetris a encore du succès ? En tout cas, c'était sympa à programmer, je ne m'en pensais pas capable. Vous avez en petit bonus le thème original de Tetris tiré de la version Gameboy.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="10">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-4.html">Démineur</a></h2>
+				<time datetime="2012-02-22">22 Février 2012</time>
+				<a href="Page-4.html"><img src="Ressources/Demineur/Image.png" width="200" alt="Démineur"></img></a>
+				<p>Voici un petit jeu de démineur, facile à faire, mais néanmoins intéressant. Je vous ne ferai pas l'affront de vous expliquer son principe.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="4">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-2.html">Fractales et ensembles de Julia</a></h2>
+				<time datetime="2012-02-05">05 Février 2012</time>
+				<a href="Page-2.html"><img src="Ressources/Fractale/Image.png" width="200" alt="Fractales et ensembles de Julia"></img></a>
+				<p>Les ensembles fractales sont des surfaces créées selon des lois mathématiques et ayant quelques particularités : <br /><span class="List">Une dimension non-entière.</span><br /><span class="List">Des similarités à petite échelle.</span><br />La plus connue est la <a href="http://fr.wikipedia.org/wiki/Ensemble_de_Mandelbrot">Fractale de Mandelbrot</a> qui est dérivée des ensembles de Julia. Je ne détaillerai pas trop ce que d'autres expliquent mieux que moi. Si vous voulez en savoir plus sur la Fractale de Mandelbrot, je vous donne rendez-vous sur <a href="http://www.siteduzero.com/tutoriel-3-344309-dessiner-la-fractale-de-mandelbrot.html">le site du zéro</a>.<br />La particularité de mon implémentation est l'exploitation des Workers en Javascript : c'est-à-dire que la génération se fera plus rapidement grâce aux capacités multi-coeur de votre ordinateur s'il en a.</p>
+								<div class="Commentaires">
+									<span>0 commentaire</span>
+										<div>
+												<p><span contenteditable="true" data-ref="2">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-3.html">Le Jeu de la Vie - Extensible</a></h2>
+				<time datetime="2011-11-03">03 Novembre 2011</time>
+				<a href="Page-3.html"><img src="Ressources/JeudelavieExtensible/Image.png" width="200" alt="Le Jeu de la Vie - Extensible"></img></a>
+				<p>Voilà le même Jeu de la Vie, mais avec une implémentation un peu différente, ici, on va travailler en espace infini. C'est-à-dire que si les cellules ont besoin de place, elles vont agrandir le cadre. C'était un peu plus dur à faire et je me suis pas mal gratté la tête avant d'y arriver. Amusez-vous bien.</p>
+								<div class="Commentaires">
+									<span>2 commentaires</span>
+										<div>
+													<p>La configuration 0 0 1 / 1 0 1 / 0 1 1 sur un carré 3x3 et avec Noir = 1 et Blanc = 0 donne un motif qui s'en va à l'infini. Une amélioration possible serait d'ajouter l'option "mettre en pause". Bravo à toi pour ce petit jeu.<time datetime="2012-06-10">10 Novembre 2012</time></p>
+														<p>Merci pour ta remarque. L'option a été ajoutée.<br />Le motif que tu me décrit est connu, il s'agit d'un planeur. Il en existe une multitude. Certains ont même trouvé des générateurs de vaisseaux ou de planeurs. Je te conseille d'aller voir sur Wikipédia dont les articles sur le jeu de la vie sont assez complets pour plus de détails et de structures intéressantes.<time datetime="2012-07-02">02 Novembre 2012</time></p>
+													<p><span contenteditable="true" data-ref="3">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+						<article>
+				<h2><a href="Page-1.html">Le Jeu de la Vie</a></h2>
+				<time datetime="2011-10-26">26 Octobre 2011</time>
+				<a href="Page-1.html"><img src="Ressources/Jeudelavie/Image.png" width="200" alt="Le Jeu de la Vie"></img></a>
+				<p>Le Jeu de la Vie est un automate cellulaire inventé par Conway en 1970. On définit des règles régissant l'évolution des cellules sur un plan et on observe le résultat.<br />À chaque instant, on regarde toutes les cellules et ses huit voisines :<br /><span class="List">Une cellule en vie le reste si elle a deux ou trois voisines, sinon elle meurt.</span><br /><span class="List">Une cellule morte naît si elle a précisément trois voisines.</span><br />Les mathématiciens se sont penchés sur ce jeu et en ont extirpé et nommé quelques structures. Parmi les plus fadas certains l'ont même utilisé pour créer des portes logiques.<br />
+Eux raisonnaient dans un plan infini, mais pour faciliter la conception on peut travailler sur un Tore <img src="Ressources/Jeudelavie/Torus.png" alt="Tore" style="vertical-align: middle;"/> : chaque côté communique avec son opposé. C'est ce que j'ai fait ici et je vous invite à essayer mon implémentation qui n'a certes rien de novatrice, mais qui est assez pratique à utiliser grâce aux nouveaux standards HTML5.</p>
+								<div class="Commentaires">
+									<span>1 commentaire</span>
+										<div>
+													<p>Juste une chose à dire : bravo ! C'est vraiment bien fait.<time datetime="2012-06-16">16 Octobre 2012</time></p>
+													<p><span contenteditable="true" data-ref="1">Pour ajouter un commentaire : éditez-moi !</span><span><input type="button" value="Envoyer"/></span></p>
+					</div>
+				</div>
+				<div class="Infos">
+											<span title="Pas encore disponible" style="text-decoration: line-through;">En savoir plus</span>
+												<a href="index.html" title="Pas encore disponible" style="text-decoration: line-through;">Making Of</a>
+										</div>
+			</article>
+					</body>
+		</html>
+		

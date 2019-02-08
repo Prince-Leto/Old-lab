@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+		<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+		<head>
+			<meta charset="UTF-8"/>
+			<title>Puissance 4</title>
+			<meta name="description" content="Puissance 4"/>
+			<link rel="stylesheet" href="Styles/Style.css" media="screen"/>
+			<link rel="stylesheet" href="Styles/Min.css" media="screen and (max-width: 950px)"/>
+							<link rel="stylesheet" href="Styles/Page.css"/>
+							<link rel="icon" type="image/png" href="Images/Favicon.png"/>
+			<script type="text/javascript">
+ 			// Google Analytics :
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-36757770-3', 'auto');
+			ga('send', 'pageview');
+			</script>
+			<script src="Scripts/Load.js"></script>
+							<script src="Ressources/Puissance4/Code.js"></script>
+						</head>
+		<body>
+					<div id="Menu">
+				<div id="Navigate">
+			<span id="Parametres">Paramètres</span>
+			<div>
+				<input id="Visible" type="checkbox" checked="checked"/><label for="Visible">Menu toujours visible</label><br />
+				<label for="Max">Nombre de coups prévus</label><input id="Max" type="number" min="0" max="9" value="5"/>
+<div><label for="La">Largeur</label><p><input id="La" type="number" value="400"/></p></div>
+<input type="button" value="Rejouer"/>			</div>
+			<span id="Documentation">Documentation</span>
+			<div>
+				Le nombre de coups prévus est le maximum jusqu'où l'ordinateur va prévoir les coups.<br />
+Pour une valeur de 0, l'ordinateur jouera au hasard. Pour une valeur de 1, l'ordinateur ne saura anticiper qu'un seul coup... Et le temps de calcul monte avec l'augmentation de cette valeur de façon exponentielle. Un conseil : ne dépassez pas 8.			</div>
+		</div>
+					<header>
+				<h1><a href="index.html" title="Accueil">Puissance 4</a></h1>
+			</header>
+					<nav>
+				<span id="Articles">Articles
+				<ul>
+				<li><a href="Page-18.html">Rubik's Cube 3D</a></li><li><a href="Page-17.html">Waveform 3D</a></li><li><a href="Page-15.html">Snake</a></li><li><a href="Page-14.html">Labyrinthes Circulaires</a></li><li><a href="Page-13.html">Générateur de Labyrinthe</a></li><li><a href="Page-12.html">Puissance 4</a></li><li><a href="Page-11.html">Le Jeu de la Vie - 3D</a></li><li><a href="Page-9.html">La Fractale de Newton</a></li><li><a href="Page-8.html">La Fourmi de Langton</a></li><li><a href="Page-7.html">Figures autosimilaires</a></li><li><a href="Page-6.html">Déformations bijectives d'image</a></li><li><a href="Page-5.html">Feu de Forêt</a></li><li><a href="Page-10.html">Tetris</a></li><li><a href="Page-4.html">Démineur</a></li><li><a href="Page-2.html">Fractales et ensembles de Julia</a></li><li><a href="Page-3.html">Le Jeu de la Vie - Extensible</a></li><li><a href="Page-1.html">Le Jeu de la Vie</a></li>				</ul>
+				</span>
+				<a id="Contact" href="ContactMe.html">Contact</a>
+				<a id="Propos" href="Apropos.html">À propos</a>
+			</nav>
+					</div>
+				<canvas></canvas>
+				</body>
+		</html>
+		

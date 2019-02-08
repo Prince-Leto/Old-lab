@@ -1,0 +1,38 @@
+#Menu {
+	border: 1px solid black;
+	border-top: none;
+	border-left: none;
+	border-radius: 0 0 5px 0;
+}
+#Menu > header {
+	display: inline-block;
+	top: 0;
+	margin: 0; padding: 0;
+	border: none;
+	line-height: 40px;
+}
+header > h1 {
+	position: relative;
+	padding: 0;
+}
+#Menu > header + nav {
+	display: inline-block;
+}
+#Menu > header {
+	display: inline-block;
+	margin: 0; padding: 0;
+	height: 40px;
+	width: calc(100% - 667px);
+	width: -webkit-calc(100% - 667px);
+	width: -moz-calc(100% - 667px);
+	font-size: 0.5em;
+}
+#Menu > header > h1 {
+	vertical-align: 0;
+}
+#Menu > header > h1:before {
+	display: none;
+}
+#Menu > header + nav > ul {
+	top: 40px;
+}

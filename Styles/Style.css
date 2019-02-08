@@ -1,0 +1,396 @@
+html {
+	height: 100%;
+	min-width: 950px;
+	font-family: 'Noto Sans';
+	background-color: #EEE;
+	background-image: url("../Images/Fond.png");
+	background-repeat: repeat;
+}
+body {
+	margin: 0; padding: 0;
+	padding-right: 10px;
+	min-width: 950px;
+}
+header {
+	height: 60px;
+	text-align: center;
+}
+header > h1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	margin: 0; padding: 0;
+	padding-top: 5px;
+	text-align: center;
+}
+header > h1 > a {
+	color: #000;
+	text-decoration: none;
+}
+header > h1:before {
+	content: url("../Images/Logo.png");
+	margin-right: -30px;
+	vertical-align: -30%;
+}
+#Menu {
+	height: 40px;
+	width: 100%;
+	background-image: -webkit-linear-gradient(top, rgba(2, 171, 234, 0.6) 0%, rgba(2, 171, 234, 0) 100%);
+	background-image: -moz-linear-gradient(top, rgba(2, 171, 234, 0.6) 0%, rgba(2, 171, 234, 0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(2, 171, 234, 0.6) 0%, rgba(2, 171, 234, 0) 100%);
+	background-image: -o-linear-gradient(top, rgba(2, 171, 234, 0.6) 0%, rgba(2, 171, 234, 0) 100%);
+	background-image: linear-gradient(top, rgba(2, 171, 234, 0.6) 0%, rgba(2, 171, 234, 0) 100%);
+}
+#Menu {
+	border: 1px solid #000;
+	border-left: none;
+	border-radius: 0 5px 5px 0;
+}
+nav {
+	position: relative;
+	text-align: right;
+}
+#Menu > div {
+	display: inline-block;
+}
+#Articles, #Contact, #Propos, #Menu > div > span {
+	display: inline-block;
+	margin: 0; padding: 0 15px;
+	line-height: 40px;
+	text-shadow: -1px 0px 0px rgba(255, 255, 255, 0.8), 1px 0px 0px rgba(255, 255, 255, 0.8), 0px -1px 0px rgba(255, 255, 255, 0.8), 0px 1px 0px rgba(255, 255, 255, 0.8);
+}
+#Articles:hover, #Contact:hover, #Propos:hover , #Navigate > span:hover {
+	background-image: -webkit-linear-gradient(top, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -moz-linear-gradient(top, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -ms-linear-gradient(top, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -o-linear-gradient(top, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: linear-gradient(top, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+}
+#Menu a {
+	color: #000;
+	text-decoration: none;
+}
+#Menu ul a {
+	display: inline-block;
+	width: 100%;
+}
+#Menu > nav > #Articles > ul {
+	position: absolute;
+	display: none;
+	top: 40px;
+	right: 0px;
+	left: 0px;
+	line-height: normal;
+	margin: 0; padding: 5px 10px;
+	width: 201px;
+	border-radius: 0 0 5px 5px;
+	border-top: 1px solid black;
+	text-align: left;
+	list-style-type: none;
+	z-index: 2;
+	text-shadow: none;
+	background-image: -webkit-linear-gradient(bottom, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-color: rgba(204, 204, 204, 0.9);
+}
+#Menu #Articles:hover > ul, #Menu #Articles + ul:hover {
+	display: block;
+}
+#Menu ul a:hover {
+	text-decoration: underline;
+}
+#Articles {
+	position: relative;
+}
+#Articles:before {
+	content: url("../Images/Articles.png");
+	display: inline-block;
+	height: 38px;
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+#Contact:before {
+	content: url("../Images/Contact.png");
+	display: inline-block;
+	height: 38px;
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+#Propos:before {
+	content: url("../Images/Propos.png");
+	display: inline-block;
+	height: 38px;
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+#Parametres:before {
+	content: url("../Images/Exec.png");
+	display: inline-block;
+	height: 38px;
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+#Documentation:before {
+	content: url("../Images/Fileopen.png");
+	display: inline-block;
+	height: 38px;
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+article {
+	overflow: hidden;
+	position: relative;
+	margin: 0 15px; padding: 5px 5%;
+}
+article > time {
+	display: block;
+	margin: 0; padding: 0;
+	font-size: 0.8em;
+}
+article > h2 {
+	margin: 0; padding: 0;
+	font-size: 1.1em;
+}
+h1, h2 {
+	text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.2);
+}
+article > h2 > a:hover {
+	text-decoration: underline;
+}
+article > a, article > h2 > a {
+	color: #000;
+	text-decoration: none;
+}
+article > time {
+	margin: 5px 0;
+}
+article > time:before {
+	content: url("../Images/Calendar.png");
+	margin-right: 5px;
+	vertical-align: -12%;
+}
+article > a > img {
+	margin-right: 15px;
+	margin-bottom: 10px;
+	float: left;
+	box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.4);
+}
+article > .Commentaires {
+	clear: both;
+}
+article > p {
+	margin: 0; padding: 0;
+	text-align: justify;
+	text-indent: 30px;
+}
+article a {
+	color: rgba(2, 171, 234, 0.6);
+	text-decoration: none;
+}
+article a:hover {
+	text-decoration: underline;
+}
+.Commentaires {
+	text-align: right;
+}
+.Commentaires > span {
+	cursor: pointer;
+}
+.Commentaires > span:before {
+	content: url("../Images/Commentaires.png");
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: -11px;
+}
+.Commentaires > div {
+	height: 0px;
+	overflow: hidden;
+	text-align: left;
+	-webkit-transition: height 400ms;
+	transition: height 400ms;
+}
+.Commentaires > div > p {
+	position: relative;
+	margin: 10px 0; padding: 10px;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid rgba(50, 50, 50, 0.5);
+}
+.Commentaires > div > p:not(:last-child) {
+	padding-bottom: 20px;
+}
+.Commentaires > div > p:last-child {
+	display: table;
+	width: 100%;
+	padding-left: 5px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.Commentaires > div > p:last-child > span {
+	display: table-cell;
+	color: #808080;
+}
+.Commentaires > div > p:last-child > span:first-child {
+	padding: 5px;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+.Commentaires > div > p:last-child > span:last-child {
+	width: 70px;
+	text-align: center;
+	vertical-align: bottom;
+}
+.Commentaires > div > p > time {
+	position: absolute;
+	bottom: 2px; right: 7px;
+	font-size: 0.8em;
+}
+.Commentaires > div > p:last-child {
+	display: table;
+	width: 100%;
+}
+body > article:not(:first-of-type) {
+	border-top: 2px solid #FFF;
+}
+.Infos {
+	position: absolute;
+	top: 0px; right: 30px;
+	height: 0px;
+	overflow: hidden;
+	border-radius: 0 0 5px 5px;
+	background-image: -webkit-linear-gradient(bottom, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-color: rgba(204, 204, 204, 0.9);
+	text-align: left;
+	-webkit-transition: 100ms;
+	transition: 100ms;
+}
+.Infos > a, .Infos > span {
+	display: block;
+	margin: 0 5px;
+	color: #000;
+}
+.Infos > span {
+	margin-top: 5px;
+}
+.Infos > a {
+	margin-bottom: 5px;
+}
+.Infos > span:hover {
+	cursor: pointer;
+}
+.Infos > span:hover, .Infos > a:hover {
+	text-decoration: underline;
+}
+.Infos > span:before {
+	content: url("../Images/Plus.png");
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+.Infos > a:before {
+	content: url("../Images/Exec.png");
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+article:hover > .Infos {
+	height: 58px;
+}
+#Navigate > div {
+	display: none;
+	position: absolute;
+	top: 40px;
+	margin: 0; padding: 5px;
+	border-top: 1px solid black;
+	border-radius: 0 0 5px 0;
+	background-image: -webkit-linear-gradient(bottom, rgba(100, 100, 100, 0.6) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -moz-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -ms-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: -o-linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-image: linear-gradient(bottom, rgba(100, 100, 100, 1) 0%, rgba(20, 20, 20, 0) 100%);
+	background-color: rgba(204, 204, 204, 0.9);
+}
+#Parametres + div input[type=number], #Parametres + div input[type=text] {
+	display: inline-block;
+	width: 60px;
+	padding: 2px;
+	text-align: center;
+}
+select {
+	padding: 0; margin: 0;
+}
+input[type=range] {
+	vertical-align: -4px;
+}
+label:after {
+	content: " : ";
+}
+input[type=checkbox] + label:after {
+	content: "";
+}
+#Parametres + div {
+	display: block;
+	width: 304px;
+	text-align: center;
+}
+#Parametres + div > :not(.Correct) > label, #Parametres + div fieldset label {
+	display: inline-block;
+	text-align: right;
+	width: 50%;
+}
+#Parametres + div input[type=number] {
+	margin: 0; padding: 0;
+}
+#Parametres + div > div > p, #Parametres + div fieldset p {
+	display: inline-block;
+	margin: 0; padding: 0;
+	width: 50%;
+	text-align: left;
+}
+#Parametres + div > div > p > input:first-child, #Parametres + div > div select, fieldset input {
+	margin-left: 4px !important;
+}
+#Documentation + div {
+	width: 304px;
+	text-align: justify;
+}
+#Navigate > span:hover + div, #Navigate > div:hover {
+	display: block;
+}
+canvas {
+	display: block;
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.Correct {
+	text-align: right;
+	padding-right: 15px;
+}
+.SameSizeButton {
+	display: inline-block;
+	width: 72px;
+}
+.Plus {
+	display: none;
+}
+.Plus > p:first-child {
+	margin: 0; padding: 0;
+}
+#Parametres + div input[type=range] {
+	display: inline-block;
+	width: 130px;
+}
+@font-face {
+	font-family: 'Noto Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Sans'), local('NotoSans'), url(https://themes.googleusercontent.com/static/fonts/notosans/v1/LeFlHvsZjXu2c3ZRgBq9nD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
